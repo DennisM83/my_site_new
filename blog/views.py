@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-posts = {
+post = {
     "first-post": "blah blah blah"
 }
 # Create your views here.
@@ -9,6 +9,6 @@ posts = {
 def index(request):
     return HttpResponse("index page")
 
-def post(request):
-    return HttpResponse("blog page")
+def posts(request):
+    return HttpResponse("blog posts")
 
