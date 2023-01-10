@@ -9,6 +9,6 @@ post = {
 def index(request):
     return HttpResponse("index page")
 
-def posts(request):
+def blog(request):
     return HttpResponse("blog posts")
 
