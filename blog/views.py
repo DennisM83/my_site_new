@@ -1,14 +1,22 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-post = {
-    "first-post": "blah blah blah"
+articles = {
+    "First Post": "blah blah blah",
+    "Second Post": "blah blah blah"
 }
+
 # Create your views here.
 
 def index(request):
-    return HttpResponse("index page")
+    return render(request, "blog/index.html")
 
-def blog(request):
-    return HttpResponse("blog posts")
+def posts(request):
+    return render(request, "blog/posts.html", {
+        "articles": articles
+    })
+    
+def single_post(request):
+    pass
+    
 
